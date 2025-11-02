@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Zaproszenie — RUCHANIE</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="card" role="dialog" aria-labelledby="title">
+<div class="titlebar" id="title">Otrzymałeś nowe zaproszenie do RUCHANIA!</div>
+<div class="content">
+<p class="heading"><span class="name">KACPER Z</span> prosi Cię o ruchanie.</p>
+<img class="photo" src="zdybson.PNG" alt="Zdjęcie zaproszenia" />
+
+
+<div class="buttons">
+<button class="btn" id="doIt">Wyruchaj go</button>
+<a class="btn secondary" id="ignore" href="https://www.google.com/?hl=pl">Zignoruj go</a>
+</div>
+</div>
+</div>
+
+
+<script>
+document.getElementById('doIt').addEventListener('click', function(){
+// Zamiast nowej karty, zmienia zawartość tej samej strony.
+document.body.innerHTML = `
+<div class="box">
+<h1>Powodzenia!</h1>
+<p>Przeniosłeś się na oddzielną stronę — poniżej znajdziesz kontaktowy numer.</p>
+<p class="big">+48 789 487 007</p>
+
+</div>`;
+});
+</script>
+</body>
+</html>
